@@ -1,0 +1,7 @@
+/node_modules  
+src/  
+test/  
+tsconfig.*  
+*.config.js  
+.npmignore 
+package-lock.json

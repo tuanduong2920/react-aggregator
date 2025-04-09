@@ -1,7 +1,7 @@
 {
-  "name": "aggregator-component",
-  "private": true,
-  "version": "0.0.0",
+  "name": "dtd-react-aggregator",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/main.d.ts",

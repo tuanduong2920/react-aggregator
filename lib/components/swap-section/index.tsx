@@ -20,6 +20,7 @@ export interface ISwapSection {
   setToken?: (e: string) => void;
   balance?: number;
   fiatRatio?: number;
+  disabled?: boolean;
 }
 
 export const SwapSectionComponent = (props: ISwapSection) => {
@@ -30,6 +31,7 @@ export const SwapSectionComponent = (props: ISwapSection) => {
     sectionLabel,
     balance = 0,
     fiatRatio,
+    disabled = false,
   } = props;
 
   const getFiatCost = () => {
@@ -44,17 +46,19 @@ export const SwapSectionComponent = (props: ISwapSection) => {
       <div className="swap-section">
         <div className="section-header">
           <span className="section-label">{sectionLabel}</span>
-          <div className="section-actions">
-            {Object.values(BalanceInputAction).map((action) => (
-              <button
-                key={action.value}
-                className="action-button"
-                onClick={() => applyBalanceAction(action.inputRate)}
-              >
-                {action.label}
-              </button>
-            ))}
-          </div>
+          {!disabled && (
+            <div className="section-actions">
+              {Object.values(BalanceInputAction).map((action) => (
+                <button
+                  key={action.value}
+                  className="action-button"
+                  onClick={() => applyBalanceAction(action.inputRate)}
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <div className="input-row">
           <NumericFormat
@@ -62,6 +66,7 @@ export const SwapSectionComponent = (props: ISwapSection) => {
             className="amount-input"
             value={value}
             placeholder="0.0"
+            disabled={disabled}
             onValueChange={(e) => {
               console.log(e);
               setValue(e.floatValue ?? 0);

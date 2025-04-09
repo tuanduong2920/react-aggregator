@@ -138,6 +138,7 @@ export const SwapWidget = () => {
           setValue={(val) => setReceiveNumber(val)}
           tokens={[]}
           token={tokensMetadata?.to}
+          disabled
         />
 
         {tradeRoute && (
@@ -147,6 +148,7 @@ export const SwapWidget = () => {
             exchange={exChangeRate() ?? 0}
             hopsNumber={tradeRoute?.routes?.[0].paths.length}
             splitsNumber={tradeRoute?.routes?.length}
+            
           />
         )}
 
