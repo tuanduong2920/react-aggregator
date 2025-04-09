@@ -1,7 +1,7 @@
 {
   "name": "dtd-react-aggregator",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/main.d.ts",
@@ -15,7 +15,7 @@
   "keywords": ["library", "example", "utility"], 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/my-library.git"
+    "url": "https://github.com/tuanduong2920/react-aggregator"
   },
   "scripts": {
     "dev": "vite",
