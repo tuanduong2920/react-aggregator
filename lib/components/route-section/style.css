@@ -1,0 +1,47 @@
+.route-section {
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 16px;
+}
+
+.route-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  margin-top: 8px;
+}
+
+.route-liquidity {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d1a26;
+  margin-right: 8px;
+}
+
+.route-path {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #777;
+}
+.route-path .token-icon {
+  width: 18px;
+  height: 18px;
+}
+.route-dots {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.route-arrow {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.route-dropdown-arrow {
+  font-size: 10px;
+  color: #555;
+  margin-left: 10px;
+  cursor: pointer;
+}
